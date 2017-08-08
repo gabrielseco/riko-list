@@ -22,4 +22,24 @@ console.log('RESULT -->', riko.push(1).insertAt(2, 2).getItems()); // this becom
 
 ```
 
+### Examples Folder
+
+You can check out the examples folder, there are examples using vanilla javascript and other folder with an angular example.
+
+For the vanilla example you need to do in the root folder. (You can use yarn or npm, I recommend using yarn is faster)
+
+```bash
+  yarn 
+  npm install
+```
+
+For the angular example you need to do in the angular folder and the step above
+
+```bash
+  yarn 
+  or 
+  npm install
+```
+
+
 
