@@ -4,7 +4,7 @@ Riko-List offers extension capabilities to add, modify and  delete items of an a
 
 ### Typescript Usage
 
-```ts
+```js
 import RikoList from 'riko-list';
 const riko = new RikoList<string>(1,2,3,4);
 
@@ -15,7 +15,7 @@ console.log('RESULT -->', riko.push(1).insertAt(2, 2).getItems()); // this becom
 ### Javascript Usage
 
 ```js
-import RikoList from '../src/riko-list';
+import RikoList from 'riko-list';
 const riko = new RikoList(1,2,3,4);
 
 console.log('RESULT -->', riko.push(1).insertAt(2, 2).getItems()); // this becomes [ '1', '2', '2', '3', '4', '1' ]
