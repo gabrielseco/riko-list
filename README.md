@@ -1,4 +1,5 @@
 # Riko-List - Extension Array Class
+[![NPM Version](https://img.shields.io/npm/v/riko-list.svg)](https://www.npmjs.com/package/riko-list) [![NPM Downloads](https://img.shields.io/npm/dm/riko-list.svg)](https://www.npmjs.com/package/riko-list)
 
 Riko-List offers extension capabilities to add, modify and  delete items of an array between others
 
