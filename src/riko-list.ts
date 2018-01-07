@@ -13,6 +13,13 @@ export default class RikoList<T> {
     return this
   }
 
+  /** Give a source as an array and set it as source */
+
+  copy(arr: T[]): this {
+    this.arr = [...arr]
+    return this
+  }
+
   /** Returns a item searched by index */
 
   get(index: number): T {
@@ -42,6 +49,11 @@ export default class RikoList<T> {
   insertAt(index: number, item: T): this {
     this.arr = [...this.arr.slice(0, index), item, ...this.arr.slice(index)]
     return this
+  }
+
+  /* Returns the length of the array */
+  get length() {
+    return this.arr.length
   }
 
   /** Deletes the last item */

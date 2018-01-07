@@ -11,6 +11,15 @@ describe("Riko test", () => {
     expect(riko.clear().getItems().length).toBe(0)
   })
 
+  it("should copy a given array", () => {
+    const riko = new RikoList<number>()
+    const numbers = [1, 2, 3, 4]
+
+    riko.copy(numbers)
+
+    expect(riko.getItems()).toEqual(numbers)
+  })
+
   it("should work like extensions", () => {
     const riko = new RikoList<string>()
     expect(riko.push("1").insertAt(2, "2").getItems()).toEqual(["1", "2"])
@@ -55,6 +64,13 @@ describe("Riko test", () => {
     const riko = new RikoList<string>("1", "2", "3", "4")
     const arr = riko.insertAt(1, "1.5")
     expect(arr.get(1)).toBe("1.5")
+  })
+
+  it("should test the length of the array", () => {
+    const riko = new RikoList<string>("1", "2", "3", "4")
+    const count = riko.length
+
+    expect(count).toBe(4)
   })
 
   it("should delete the last element of the array", () => {

@@ -1,4 +1,4 @@
-const RikoList = require('../dist/riko-list.umd');
+const RikoList = require('../../dist/riko-list.umd');
 
 const riko = new RikoList("1", "2");
 
