@@ -64,6 +64,7 @@ describe("Riko test", () => {
     const riko = new RikoList<string>("1", "2", "3", "4")
     const arr = riko.insertAt(1, "1.5")
     expect(arr.get(1)).toBe("1.5")
+    expect(arr.length).toBe(5)
   })
 
   it("should test the length of the array", () => {
@@ -88,9 +89,23 @@ describe("Riko test", () => {
 
   it("should remove an item of the array", () => {
     const riko = new RikoList<string>("1", "2", "3", "4")
-    expect(riko.getItems().length).toBe(4)
+    expect(riko.length).toBe(4)
     expect(riko.removeAt(1).get(1)).toBe("3")
-    expect(riko.getItems().length).toBe(3)
+    expect(riko.length).toBe(3)
+  })
+
+  it("should replace an item of the array", () => {
+    const riko = new RikoList<number>(1, 3, 4)
+
+    expect(riko.length).toBe(3)
+
+    const index = 1
+    const item = 2
+
+    riko.replaceAt(index, item)
+
+    expect(riko.get(index)).toBe(item)
+    expect(riko.length).toBe(3)
   })
 
   it("should set items only an array type", () => {

@@ -77,6 +77,13 @@ export default class RikoList<T> {
     return this
   }
 
+  /** Replace an item in the array with a position given */
+
+  replaceAt(index: number, item: T): this {
+    this.arr = [...this.arr.slice(0, index), item, ...this.arr.slice(index + 1)]
+    return this
+  }
+
   /** Add several items to the list */
 
   setItems(...args: T[]): this {
